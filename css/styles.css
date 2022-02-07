@@ -311,6 +311,7 @@ html {
     -webkit-text-size-adjust : 100%;
 }
 
+
 body {
     margin : 0;
 }
@@ -3533,13 +3534,13 @@ img.u-pull-left {
 /* ------------------------------------------------------------------- 
  * ## MailChimp form
  * ------------------------------------------------------------------- */
-.mc-form input[type="email"] {
+.mc-form input {
     background-color : white;
     margin-bottom    : var(--vspace-0_5);
     border           : 1px solid var(--color-gray-3);
 }
 
-.mc-form input[type="email"]:focus {
+.mc-form input {
     box-shadow : 0 0 5px var(--color-1);
     border     : 1px solid var(--color-1);
 }
