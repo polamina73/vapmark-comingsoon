@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VAPMARK</title>
+
+    <script>
+      document.documentElement.classList.remove("no-js");
+      document.documentElement.classList.add("js");
+    </script>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="fav.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="fav.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="fav.png" />
+    <link rel="manifest" href="site.webmanifest" />
+  </head>
+
+  <body id="top">
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+      <div id="loader"></div>
+    </div>
+
+    <!-- page wrap
+    ================================================== -->
+    <div class="s-pagewrap">
+      <!-- # header
+        ================================================== -->
+      <header class="s-header">
+        <div class="row s-header__content">
+          <div class="s-header__logo">
+            <a class="logo" href="index-static.html">
+              <img src="images/logo.png" alt="Homepage" />
+            </a>
+          </div>
+
+          <ul class="s-header__social">
+            <li>
+              <a href="https://www.facebook.com/vapmarkofficial">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(0, 0, 0, 1); transform: ; -ms-filter: "
+                >
+                  <path
+                    d="M20,3H4C3.447,3,3,3.448,3,4v16c0,0.552,0.447,1,1,1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325,1.42-3.592,3.5-3.592 c0.699-0.002,1.399,0.034,2.095,0.107v2.42h-1.435c-1.128,0-1.348,0.538-1.348,1.325v1.735h2.697l-0.35,2.725h-2.348V21H20 c0.553,0,1-0.448,1-1V4C21,3.448,20.553,3,20,3z"
+                  ></path>
+                </svg>
+                <span class="screen-reader-text">Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/vapmarkofficial">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(0, 0, 0, 1); transform: ; -ms-filter: "
+                >
+                  <path
+                    d="M19.633,7.997c0.013,0.175,0.013,0.349,0.013,0.523c0,5.325-4.053,11.461-11.46,11.461c-2.282,0-4.402-0.661-6.186-1.809 c0.324,0.037,0.636,0.05,0.973,0.05c1.883,0,3.616-0.636,5.001-1.721c-1.771-0.037-3.255-1.197-3.767-2.793 c0.249,0.037,0.499,0.062,0.761,0.062c0.361,0,0.724-0.05,1.061-0.137c-1.847-0.374-3.23-1.995-3.23-3.953v-0.05 c0.537,0.299,1.16,0.486,1.82,0.511C3.534,9.419,2.823,8.184,2.823,6.787c0-0.748,0.199-1.434,0.548-2.032 c1.983,2.443,4.964,4.04,8.306,4.215c-0.062-0.3-0.1-0.611-0.1-0.923c0-2.22,1.796-4.028,4.028-4.028 c1.16,0,2.207,0.486,2.943,1.272c0.91-0.175,1.782-0.512,2.556-0.973c-0.299,0.935-0.936,1.721-1.771,2.22 c0.811-0.088,1.597-0.312,2.319-0.624C21.104,6.712,20.419,7.423,19.633,7.997z"
+                  ></path>
+                </svg>
+                <span class="screen-reader-text">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.tiktok.com/@vapmarkofficial">
+                <svg
+                  width="48px"
+                  height="48px"
+                  viewBox="0 0 48 48"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <path
+                    d="M38.0766847,15.8542954 C36.0693906,15.7935177 34.2504839,14.8341149 32.8791434,13.5466056 C32.1316475,12.8317108 31.540171,11.9694126 31.1415066,11.0151329 C30.7426093,10.0603874 30.5453728,9.03391952 30.5619062,8 L24.9731521,8 L24.9731521,28.8295196 C24.9731521,32.3434487 22.8773693,34.4182737 20.2765028,34.4182737 C19.6505623,34.4320127 19.0283477,34.3209362 18.4461858,34.0908659 C17.8640239,33.8612612 17.3337909,33.5175528 16.8862248,33.0797671 C16.4386588,32.6422142 16.0833071,32.1196657 15.8404292,31.5426268 C15.5977841,30.9658208 15.4727358,30.3459348 15.4727358,29.7202272 C15.4727358,29.0940539 15.5977841,28.4746337 15.8404292,27.8978277 C16.0833071,27.3207888 16.4386588,26.7980074 16.8862248,26.3604545 C17.3337909,25.9229017 17.8640239,25.5791933 18.4461858,25.3491229 C19.0283477,25.1192854 19.6505623,25.0084418 20.2765028,25.0219479 C20.7939283,25.0263724 21.3069293,25.1167239 21.794781,25.2902081 L21.794781,19.5985278 C21.2957518,19.4900128 20.7869423,19.436221 20.2765028,19.4380839 C18.2431278,19.4392483 16.2560928,20.0426009 14.5659604,21.1729264 C12.875828,22.303019 11.5587449,23.9090873 10.7814424,25.7878401 C10.003907,27.666593 9.80084889,29.7339663 10.1981162,31.7275214 C10.5953834,33.7217752 11.5748126,35.5530237 13.0129853,36.9904978 C14.4509252,38.4277391 16.2828722,39.4064696 18.277126,39.8028054 C20.2711469,40.1991413 22.3382874,39.9951517 24.2163416,39.2169177 C26.0948616,38.4384508 27.7002312,37.1209021 28.8296253,35.4300711 C29.9592522,33.7397058 30.5619062,31.7522051 30.5619062,29.7188301 L30.5619062,18.8324027 C32.7275484,20.3418321 35.3149087,21.0404263 38.0766847,21.0867664 L38.0766847,15.8542954 Z"
+                    id="Fill-1"
+                    fill="#000000"
+                  ></path>
+                </svg>
+                <span class="screen-reader-text">TikTok</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/vapmarkofficial">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(0, 0, 0, 1); transform: ; -ms-filter: "
+                >
+                  <path
+                    d="M11.999,7.377c-2.554,0-4.623,2.07-4.623,4.623c0,2.554,2.069,4.624,4.623,4.624c2.552,0,4.623-2.07,4.623-4.624 C16.622,9.447,14.551,7.377,11.999,7.377L11.999,7.377z M11.999,15.004c-1.659,0-3.004-1.345-3.004-3.003 c0-1.659,1.345-3.003,3.004-3.003s3.002,1.344,3.002,3.003C15.001,13.659,13.658,15.004,11.999,15.004L11.999,15.004z"
+                  ></path>
+                  <circle cx="16.806" cy="7.207" r="1.078"></circle>
+                  <path
+                    d="M20.533,6.111c-0.469-1.209-1.424-2.165-2.633-2.632c-0.699-0.263-1.438-0.404-2.186-0.42 c-0.963-0.042-1.268-0.054-3.71-0.054s-2.755,0-3.71,0.054C7.548,3.074,6.809,3.215,6.11,3.479C4.9,3.946,3.945,4.902,3.477,6.111 c-0.263,0.7-0.404,1.438-0.419,2.186c-0.043,0.962-0.056,1.267-0.056,3.71c0,2.442,0,2.753,0.056,3.71 c0.015,0.748,0.156,1.486,0.419,2.187c0.469,1.208,1.424,2.164,2.634,2.632c0.696,0.272,1.435,0.426,2.185,0.45 c0.963,0.042,1.268,0.055,3.71,0.055s2.755,0,3.71-0.055c0.747-0.015,1.486-0.157,2.186-0.419c1.209-0.469,2.164-1.424,2.633-2.633 c0.263-0.7,0.404-1.438,0.419-2.186c0.043-0.962,0.056-1.267,0.056-3.71s0-2.753-0.056-3.71C20.941,7.57,20.801,6.819,20.533,6.111z M19.315,15.643c-0.007,0.576-0.111,1.147-0.311,1.688c-0.305,0.787-0.926,1.409-1.712,1.711c-0.535,0.199-1.099,0.303-1.67,0.311 c-0.95,0.044-1.218,0.055-3.654,0.055c-2.438,0-2.687,0-3.655-0.055c-0.569-0.007-1.135-0.112-1.669-0.311 c-0.789-0.301-1.414-0.923-1.719-1.711c-0.196-0.534-0.302-1.099-0.311-1.669c-0.043-0.95-0.053-1.218-0.053-3.654 c0-2.437,0-2.686,0.053-3.655c0.007-0.576,0.111-1.146,0.311-1.687c0.305-0.789,0.93-1.41,1.719-1.712 c0.534-0.198,1.1-0.303,1.669-0.311c0.951-0.043,1.218-0.055,3.655-0.055c2.437,0,2.687,0,3.654,0.055 c0.571,0.007,1.135,0.112,1.67,0.311c0.786,0.303,1.407,0.925,1.712,1.712c0.196,0.534,0.302,1.099,0.311,1.669 c0.043,0.951,0.054,1.218,0.054,3.655c0,2.436,0,2.698-0.043,3.654H19.315z"
+                  ></path>
+                </svg>
+                <span class="screen-reader-text">Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/channel/UCn-GIH8QaYdNlmB8apduPzQ"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M4.652 0h1.44l.988 3.702.916-3.702h1.454l-1.665 5.505v3.757h-1.431v-3.757l-1.702-5.505zm6.594 2.373c-1.119 0-1.861.74-1.861 1.835v3.349c0 1.204.629 1.831 1.861 1.831 1.022 0 1.826-.683 1.826-1.831v-3.349c0-1.069-.797-1.835-1.826-1.835zm.531 5.127c0 .372-.19.646-.532.646-.351 0-.554-.287-.554-.646v-3.179c0-.374.172-.651.529-.651.39 0 .557.269.557.651v3.179zm4.729-5.07v5.186c-.155.194-.5.512-.747.512-.271 0-.338-.186-.338-.46v-5.238h-1.27v5.71c0 .675.206 1.22.887 1.22.384 0 .918-.2 1.468-.853v.754h1.27v-6.831h-1.27zm2.203 13.858c-.448 0-.541.315-.541.763v.659h1.069v-.66c.001-.44-.092-.762-.528-.762zm-4.703.04c-.084.043-.167.109-.25.198v4.055c.099.106.194.182.287.229.197.1.485.107.619-.067.07-.092.105-.241.105-.449v-3.359c0-.22-.043-.386-.129-.5-.147-.193-.42-.214-.632-.107zm4.827-5.195c-2.604-.177-11.066-.177-13.666 0-2.814.192-3.146 1.892-3.167 6.367.021 4.467.35 6.175 3.167 6.367 2.6.177 11.062.177 13.666 0 2.814-.192 3.146-1.893 3.167-6.367-.021-4.467-.35-6.175-3.167-6.367zm-12.324 10.686h-1.363v-7.54h-1.41v-1.28h4.182v1.28h-1.41v7.54zm4.846 0h-1.21v-.718c-.223.265-.455.467-.696.605-.652.374-1.547.365-1.547-.955v-5.438h1.209v4.988c0 .262.063.438.322.438.236 0 .564-.303.711-.487v-4.939h1.21v6.506zm4.657-1.348c0 .805-.301 1.431-1.106 1.431-.443 0-.812-.162-1.149-.583v.5h-1.221v-8.82h1.221v2.84c.273-.333.644-.608 1.076-.608.886 0 1.18.749 1.18 1.631v3.609zm4.471-1.752h-2.314v1.228c0 .488.042.91.528.91.511 0 .541-.344.541-.91v-.452h1.245v.489c0 1.253-.538 2.013-1.813 2.013-1.155 0-1.746-.842-1.746-2.013v-2.921c0-1.129.746-1.914 1.837-1.914 1.161 0 1.721.738 1.721 1.914v1.656z"
+                  />
+                </svg>
+                <span class="screen-reader-text">YouTube</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- end s-header__content -->
+      </header>
+      <!-- end s-header -->
+
+      <!-- # intro 
+        ================================================== -->
+      <section id="intro" class="s-intro">
+        <div class="s-intro__bg"></div>
+
+        <div class="row s-intro__content">
+          <div class="column lg-12">
+            <div class="counter">
+              <div class="counter__time">
+                <span class="ss-days">365</span>
+                <span>days</span>
+              </div>
+              <div class="counter__time">
+                <span class="ss-hours">01</span>
+                <span>hours</span>
+              </div>
+              <div class="counter__time minutes">
+                <span class="ss-minutes">01</span>
+                <span>mins</span>
+              </div>
+              <div class="counter__time">
+                <span class="ss-seconds">55</span>
+                <span>secs</span>
+              </div>
+            </div>
+            <!-- end counter -->
+
+            <div class="s-intro__content-bottom">
+              <h1 class="s-intro__content-title">
+                VAPMARK Is Launching Soon.
+              </h1>
+              <p>
+                We are the largest e-cigarette smokers community that helps you
+                buy everything you need, share information, and provide support
+                for all the inquiries you need.
+              </p>
+            </div>
+          </div>
+
+          <div class="s-intro__scroll">
+            <p class="scroll-text">Scroll For More</p>
+            <a href="#info" class="smoothscroll">
+              <div class="mouse"></div>
+            </a>
+            <div class="end-top"></div>
+          </div>
+          <!-- end s-intro__scroll -->
+        </div>
+        <!-- intro__content -->
+      </section>
+      <!-- end s-intro -->
+
+      <!-- # info
+        ================================================== -->
+      <section id="info" class="s-info">
+        <div class="s-info__bg"></div>
+
+        <div class="row">
+          <div class="column lg-12">
+            <nav class="tab-nav">
+              <ul class="tab-nav__list">
+                <li class="active" data-id="tab-about">
+                  <a href="#tab-about"> About </a>
+                </li>
+                <li>
+                  <a href="#tab-services"> Services </a>
+                </li>
+                <li>
+                  <a href="#tab-contact"> Subscribe </a>
+                </li>
+              </ul>
+            </nav>
+            <!-- end tab-nav -->
+
+            <div class="tab-content">
+              <!-- 01 - tab about -->
+              <div id="tab-about" class="tab-content__item">
+                <div class="row tab-content__item-header">
+                  <div class="column">
+                    <h2>Get To Know Us.</h2>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="column">
+                    <p class="lead">
+                      We are a community of electronic cigarette smokers, our
+                      goal is to unify a place for all users of our community to
+                      make it easier for them to shop and search for everything
+                      new and reach the appropriate seller for the users'
+                      requirements Members can also share their experiences,
+                      inquiries, and more
+                    </p>
+
+                    <div class="row">
+                      <div class="column lg-12 tab-12">
+                        <h4>More About Us.</h4>
+                        <p>
+                          The first site in the Arab world that allows all
+                          electronic cigarette dealers to open their online
+                          stores on our own site. It also enables users to
+                          resell their used piece. It also provides users with a
+                          place to share users’ experiences and inquiries and
+                          respond to them as well.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end 01 - tab about -->
+
+              <!-- 02 - tab services -->
+              <div id="tab-services" class="tab-content__item">
+                <div class="row tab-content__item-header">
+                  <div class="column">
+                    <h2>What We Do.</h2>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="column">
+                    <p class="lead">
+                      Our site provides for all electronic cigarette sellers to
+                      open their own store, which enables them to display their
+                      products on our platform, and enables the regular user to
+                      display his used piece and sell it to other users in
+                      another part of the site.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="row services-list block-lg-one-half block-md-one-half block-tab-whole"
+                >
+                  <div class="column services-list__item">
+                    <div class="services-list__item-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        style="
+                          fill: rgba(0, 0, 0, 1);
+                          transform: ;
+                          -ms-filter: ;
+                        "
+                      >
+                        <path
+                          d="M12,6c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6S15.309,6,12,6z M12,16c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4 S14.206,16,12,16z"
+                        ></path>
+                        <path
+                          d="M12,2C6.579,2,2,6.579,2,12s4.579,10,10,10s10-4.579,10-10S17.421,2,12,2z M12,20c-4.337,0-8-3.663-8-8s3.663-8,8-8 s8,3.663,8,8S16.337,20,12,20z"
+                        ></path>
+                        <path
+                          d="M12,10c-1.081,0-2,0.919-2,2s0.919,2,2,2s2-0.919,2-2S13.081,10,12,10z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="services-list__item-content">
+                      <h4 class="item-title">Brand Identity</h4>
+                      <p>
+                        The first electronic platform for the community of
+                        electronic cigarette smokers on the Internet.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="column services-list__item">
+                    <div class="services-list__item-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        style="
+                          fill: rgba(0, 0, 0, 1);
+                          transform: ;
+                          -ms-filter: ;
+                        "
+                      >
+                        <path
+                          d="M18.277,8C18.624,8.596,19.262,9,20,9c1.104,0,2-0.896,2-2s-0.896-2-2-2c-0.738,0-1.376,0.404-1.723,1H16V4 c0-0.553-0.447-1-1-1H9C8.448,3,8,3.447,8,4v2H5.723C5.376,5.404,4.738,5,4,5C2.896,5,2,5.896,2,7s0.896,2,2,2 c0.738,0,1.376-0.404,1.723-1H8v0.369C5.133,9.84,4.318,12.534,4.091,14H3c-0.552,0-1,0.447-1,1v4c0,0.553,0.448,1,1,1h4 c0.552,0,1-0.447,1-1v-4c0-0.553-0.448-1-1-1H6.123c0.197-0.959,0.718-2.406,2.085-3.418C8.391,10.829,8.669,11,9,11h6 c0.331,0,0.61-0.171,0.792-0.419c1.373,1.013,1.895,2.458,2.089,3.419H17c-0.553,0-1,0.447-1,1v4c0,0.553,0.447,1,1,1h4 c0.553,0,1-0.447,1-1v-4c0-0.553-0.447-1-1-1h-1.092C19.681,12.534,18.866,9.839,16,8.368V8H18.277z M6,18H4v-2h2V18z M20,18h-2v-2 h2V18z M14,9h-4V8V6V5h4V9z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="services-list__item-content">
+                      <h4 class="item-title">Illustration</h4>
+                      <p>
+                        All electronic cigarette sellers can open their own
+                        stores on our site after passing the stages of
+                        documenting their own stores or their own brand There is
+                        also a special section on the website that enables
+                        regular users to view used parts and offer to exchange
+                        or sell.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="column services-list__item">
+                    <div class="services-list__item-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        style="
+                          fill: rgba(0, 0, 0, 1);
+                          transform: ;
+                          -ms-filter: ;
+                        "
+                      >
+                        <path
+                          d="M19,3H5C3.897,3,3,3.897,3,5v14c0,1.103,0.897,2,2,2h14c1.103,0,2-0.897,2-2V5C21,3.897,20.103,3,19,3z M19,5l0.001,4H15h-2 H5V5H19z M5,11h8v8H5V11z M15,19v-8h4.001l0.001,8H15z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="services-list__item-content">
+                      <h4 class="item-title">Web Design</h4>
+                      <p>
+                        The design of the site makes it easy for the user to
+                        determine his requirements and quickly access it. It
+                        also provides a follow-up system for delivery and the
+                        electronic payment process.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="column services-list__item">
+                    <div class="services-list__item-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        style="
+                          fill: rgba(0, 0, 0, 1);
+                          transform: ;
+                          -ms-filter: ;
+                        "
+                      >
+                        <path
+                          d="M20,3H4C2.897,3,2,3.897,2,5v11c0,1.103,0.897,2,2,2h4l-1.8,2.4l1.6,1.2l2.7-3.6h3l2.7,3.6l1.6-1.2L16,18h4 c1.103,0,2-0.897,2-2V5C22,3.897,21.103,3,20,3z M4,16V5h16l0.001,11H4z"
+                        ></path>
+                        <path d="M6 12H10V14H6z"></path>
+                      </svg>
+                    </div>
+                    <div class="services-list__item-content">
+                      <h4 class="item-title">E-Commerce</h4>
+                      <p>
+                        The e-commerce experience for the category of
+                        e-cigarette smokers will provide all members of our
+                        community with the ease of searching and obtaining their
+                        requirements quickly, providing safe delivery and safe
+                        payment methods.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- end services-list -->
+              </div>
+              <!-- end 02 - tab services -->
+
+              <!-- 03 - tab contact -->
+              <div id="tab-contact" class="tab-content__item">
+                <div class="row tab-content__item-header">
+                  <div class="column">
+                    <h2>Subscribe To Our Newsletter.</h2>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="column">
+                    <p class="lead">
+                      You can join us to follow our latest news and offers .
+                    </p>
+
+                    <form id="mc-form" class="mc-form">
+                      <input
+                        type="email"
+                        name="EMAIL"
+                        id="mce-EMAIL"
+                        class="u-fullwidth text-center"
+                        placeholder="Email Address"
+                        title="The domain portion of the email address is invalid (the portion after the @)."
+                        pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$"
+                        required
+                      />
+                      <input
+                        type="submit"
+                        name="subscribe"
+                        value="Subscribe"
+                        class="btn--small btn--primary u-fullwidth"
+                      />
+                      <!-- <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cdb7b577e41181934ed6a6a44_9a91cfe7b3" tabindex="-1" value=""></div> -->
+                      <div class="mc-status"></div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- end 03 - tab contact -->
+            </div>
+            <!-- end tab content -->
+          </div>
+          <!-- end column -->
+        </div>
+        <!-- end row -->
+      </section>
+      <!-- end s-info -->
+
+      <!-- # footer
+        ================================================== -->
+      <footer class="s-footer">
+        <div class="row s-footer__top">
+          <div class="column lg-6 stack-on-700 s-footer__block s-footer__info">
+            <h4 class="h6">VAPMARK</h4>
+
+            <p class="desc">
+              We are the largest e-cigarette smokers community that helps you
+              buy everything you need, share information, and provide support
+              for all the inquiries you need.
+            </p>
+
+            <ul class="s-footer__social">
+              <li>
+              <a href="https://www.facebook.com/vapmarkofficial">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(0, 0, 0, 1); transform: ; -ms-filter: "
+                >
+                  <path
+                    d="M20,3H4C3.447,3,3,3.448,3,4v16c0,0.552,0.447,1,1,1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325,1.42-3.592,3.5-3.592 c0.699-0.002,1.399,0.034,2.095,0.107v2.42h-1.435c-1.128,0-1.348,0.538-1.348,1.325v1.735h2.697l-0.35,2.725h-2.348V21H20 c0.553,0,1-0.448,1-1V4C21,3.448,20.553,3,20,3z"
+                  ></path>
+                </svg>
+                <span class="screen-reader-text">Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/vapmarkofficial">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(0, 0, 0, 1); transform: ; -ms-filter: "
+                >
+                  <path
+                    d="M19.633,7.997c0.013,0.175,0.013,0.349,0.013,0.523c0,5.325-4.053,11.461-11.46,11.461c-2.282,0-4.402-0.661-6.186-1.809 c0.324,0.037,0.636,0.05,0.973,0.05c1.883,0,3.616-0.636,5.001-1.721c-1.771-0.037-3.255-1.197-3.767-2.793 c0.249,0.037,0.499,0.062,0.761,0.062c0.361,0,0.724-0.05,1.061-0.137c-1.847-0.374-3.23-1.995-3.23-3.953v-0.05 c0.537,0.299,1.16,0.486,1.82,0.511C3.534,9.419,2.823,8.184,2.823,6.787c0-0.748,0.199-1.434,0.548-2.032 c1.983,2.443,4.964,4.04,8.306,4.215c-0.062-0.3-0.1-0.611-0.1-0.923c0-2.22,1.796-4.028,4.028-4.028 c1.16,0,2.207,0.486,2.943,1.272c0.91-0.175,1.782-0.512,2.556-0.973c-0.299,0.935-0.936,1.721-1.771,2.22 c0.811-0.088,1.597-0.312,2.319-0.624C21.104,6.712,20.419,7.423,19.633,7.997z"
+                  ></path>
+                </svg>
+                <span class="screen-reader-text">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.tiktok.com/@vapmarkofficial">
+                <svg
+                  width="48px"
+                  height="48px"
+                  viewBox="0 0 48 48"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <path
+                    d="M38.0766847,15.8542954 C36.0693906,15.7935177 34.2504839,14.8341149 32.8791434,13.5466056 C32.1316475,12.8317108 31.540171,11.9694126 31.1415066,11.0151329 C30.7426093,10.0603874 30.5453728,9.03391952 30.5619062,8 L24.9731521,8 L24.9731521,28.8295196 C24.9731521,32.3434487 22.8773693,34.4182737 20.2765028,34.4182737 C19.6505623,34.4320127 19.0283477,34.3209362 18.4461858,34.0908659 C17.8640239,33.8612612 17.3337909,33.5175528 16.8862248,33.0797671 C16.4386588,32.6422142 16.0833071,32.1196657 15.8404292,31.5426268 C15.5977841,30.9658208 15.4727358,30.3459348 15.4727358,29.7202272 C15.4727358,29.0940539 15.5977841,28.4746337 15.8404292,27.8978277 C16.0833071,27.3207888 16.4386588,26.7980074 16.8862248,26.3604545 C17.3337909,25.9229017 17.8640239,25.5791933 18.4461858,25.3491229 C19.0283477,25.1192854 19.6505623,25.0084418 20.2765028,25.0219479 C20.7939283,25.0263724 21.3069293,25.1167239 21.794781,25.2902081 L21.794781,19.5985278 C21.2957518,19.4900128 20.7869423,19.436221 20.2765028,19.4380839 C18.2431278,19.4392483 16.2560928,20.0426009 14.5659604,21.1729264 C12.875828,22.303019 11.5587449,23.9090873 10.7814424,25.7878401 C10.003907,27.666593 9.80084889,29.7339663 10.1981162,31.7275214 C10.5953834,33.7217752 11.5748126,35.5530237 13.0129853,36.9904978 C14.4509252,38.4277391 16.2828722,39.4064696 18.277126,39.8028054 C20.2711469,40.1991413 22.3382874,39.9951517 24.2163416,39.2169177 C26.0948616,38.4384508 27.7002312,37.1209021 28.8296253,35.4300711 C29.9592522,33.7397058 30.5619062,31.7522051 30.5619062,29.7188301 L30.5619062,18.8324027 C32.7275484,20.3418321 35.3149087,21.0404263 38.0766847,21.0867664 L38.0766847,15.8542954 Z"
+                    id="Fill-1"
+                    fill="#000000"
+                  ></path>
+                </svg>
+                <span class="screen-reader-text">TikTok</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/vapmarkofficial">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(0, 0, 0, 1); transform: ; -ms-filter: "
+                >
+                  <path
+                    d="M11.999,7.377c-2.554,0-4.623,2.07-4.623,4.623c0,2.554,2.069,4.624,4.623,4.624c2.552,0,4.623-2.07,4.623-4.624 C16.622,9.447,14.551,7.377,11.999,7.377L11.999,7.377z M11.999,15.004c-1.659,0-3.004-1.345-3.004-3.003 c0-1.659,1.345-3.003,3.004-3.003s3.002,1.344,3.002,3.003C15.001,13.659,13.658,15.004,11.999,15.004L11.999,15.004z"
+                  ></path>
+                  <circle cx="16.806" cy="7.207" r="1.078"></circle>
+                  <path
+                    d="M20.533,6.111c-0.469-1.209-1.424-2.165-2.633-2.632c-0.699-0.263-1.438-0.404-2.186-0.42 c-0.963-0.042-1.268-0.054-3.71-0.054s-2.755,0-3.71,0.054C7.548,3.074,6.809,3.215,6.11,3.479C4.9,3.946,3.945,4.902,3.477,6.111 c-0.263,0.7-0.404,1.438-0.419,2.186c-0.043,0.962-0.056,1.267-0.056,3.71c0,2.442,0,2.753,0.056,3.71 c0.015,0.748,0.156,1.486,0.419,2.187c0.469,1.208,1.424,2.164,2.634,2.632c0.696,0.272,1.435,0.426,2.185,0.45 c0.963,0.042,1.268,0.055,3.71,0.055s2.755,0,3.71-0.055c0.747-0.015,1.486-0.157,2.186-0.419c1.209-0.469,2.164-1.424,2.633-2.633 c0.263-0.7,0.404-1.438,0.419-2.186c0.043-0.962,0.056-1.267,0.056-3.71s0-2.753-0.056-3.71C20.941,7.57,20.801,6.819,20.533,6.111z M19.315,15.643c-0.007,0.576-0.111,1.147-0.311,1.688c-0.305,0.787-0.926,1.409-1.712,1.711c-0.535,0.199-1.099,0.303-1.67,0.311 c-0.95,0.044-1.218,0.055-3.654,0.055c-2.438,0-2.687,0-3.655-0.055c-0.569-0.007-1.135-0.112-1.669-0.311 c-0.789-0.301-1.414-0.923-1.719-1.711c-0.196-0.534-0.302-1.099-0.311-1.669c-0.043-0.95-0.053-1.218-0.053-3.654 c0-2.437,0-2.686,0.053-3.655c0.007-0.576,0.111-1.146,0.311-1.687c0.305-0.789,0.93-1.41,1.719-1.712 c0.534-0.198,1.1-0.303,1.669-0.311c0.951-0.043,1.218-0.055,3.655-0.055c2.437,0,2.687,0,3.654,0.055 c0.571,0.007,1.135,0.112,1.67,0.311c0.786,0.303,1.407,0.925,1.712,1.712c0.196,0.534,0.302,1.099,0.311,1.669 c0.043,0.951,0.054,1.218,0.054,3.655c0,2.436,0,2.698-0.043,3.654H19.315z"
+                  ></path>
+                </svg>
+                <span class="screen-reader-text">Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/channel/UCn-GIH8QaYdNlmB8apduPzQ"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M4.652 0h1.44l.988 3.702.916-3.702h1.454l-1.665 5.505v3.757h-1.431v-3.757l-1.702-5.505zm6.594 2.373c-1.119 0-1.861.74-1.861 1.835v3.349c0 1.204.629 1.831 1.861 1.831 1.022 0 1.826-.683 1.826-1.831v-3.349c0-1.069-.797-1.835-1.826-1.835zm.531 5.127c0 .372-.19.646-.532.646-.351 0-.554-.287-.554-.646v-3.179c0-.374.172-.651.529-.651.39 0 .557.269.557.651v3.179zm4.729-5.07v5.186c-.155.194-.5.512-.747.512-.271 0-.338-.186-.338-.46v-5.238h-1.27v5.71c0 .675.206 1.22.887 1.22.384 0 .918-.2 1.468-.853v.754h1.27v-6.831h-1.27zm2.203 13.858c-.448 0-.541.315-.541.763v.659h1.069v-.66c.001-.44-.092-.762-.528-.762zm-4.703.04c-.084.043-.167.109-.25.198v4.055c.099.106.194.182.287.229.197.1.485.107.619-.067.07-.092.105-.241.105-.449v-3.359c0-.22-.043-.386-.129-.5-.147-.193-.42-.214-.632-.107zm4.827-5.195c-2.604-.177-11.066-.177-13.666 0-2.814.192-3.146 1.892-3.167 6.367.021 4.467.35 6.175 3.167 6.367 2.6.177 11.062.177 13.666 0 2.814-.192 3.146-1.893 3.167-6.367-.021-4.467-.35-6.175-3.167-6.367zm-12.324 10.686h-1.363v-7.54h-1.41v-1.28h4.182v1.28h-1.41v7.54zm4.846 0h-1.21v-.718c-.223.265-.455.467-.696.605-.652.374-1.547.365-1.547-.955v-5.438h1.209v4.988c0 .262.063.438.322.438.236 0 .564-.303.711-.487v-4.939h1.21v6.506zm4.657-1.348c0 .805-.301 1.431-1.106 1.431-.443 0-.812-.162-1.149-.583v.5h-1.221v-8.82h1.221v2.84c.273-.333.644-.608 1.076-.608.886 0 1.18.749 1.18 1.631v3.609zm4.471-1.752h-2.314v1.228c0 .488.042.91.528.91.511 0 .541-.344.541-.91v-.452h1.245v.489c0 1.253-.538 2.013-1.813 2.013-1.155 0-1.746-.842-1.746-2.013v-2.921c0-1.129.746-1.914 1.837-1.914 1.161 0 1.721.738 1.721 1.914v1.656z"
+                  />
+                </svg>
+                <span class="screen-reader-text">YouTube</span>
+              </a>
+            </li>
+            </ul>
+          </div>
+          <!-- end s-footer__info -->
+
+          <div
+            class="column lg-6 stack-on-700 s-footer__block s-footer__contact"
+          >
+            <h4 class="h6">Contact Info</h4>
+
+            <div class="row">
+              <div class="column lg-6 stack-on-1000">
+                <p>
+                  <strong>Phone</strong> <br />
+                  <a href="tel:01096633117">+20 0109 663 3117</a>
+                </p>
+              </div>
+              <div class="column lg-6 stack-on-1000">
+                <p>
+                  <strong>Email</strong> <br />
+                  <a href="mailto:contact@vapmark.com">contact@vapmark.com</a>
+                </p>
+              </div>
+            </div>
+
+            <p>
+              <strong>Office Address</strong> <br />
+              Cairo,Egypt <br />
+            </p>
+          </div>
+          <!-- end s-footer__contact -->
+        </div>
+        <!-- end s-footer__top -->
+
+        <div class="row s-footer__bottom">
+          <div class="column lg-12">
+            <div class="ss-copyright">
+              <span>© Copyright VAPMARK 2022</span>
+            </div>
+          </div>
+
+          <div class="ss-go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                style="fill: rgba(0, 0, 0, 1); transform: ; -ms-filter: "
+              >
+                <path
+                  d="M6 4H18V6H6zM11 14L11 20 13 20 13 14 18 14 12 8 6 14z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!--end s-footer__bottom -->
+      </footer>
+      <!--end s-footer -->
+    </div>
+    <!-- end pagewrap -->
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
