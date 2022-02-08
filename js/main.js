@@ -479,6 +479,26 @@
     triggers.forEach(function (trigger) {
       moveTo.registerTrigger(trigger);
     });
+
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbwxxRDHluCSxmxLmjFWnA2jxsPp6z4aGjPgRzhgmSmNzwWZXuwgBGlIvc8SIt4zAUIX/exec";
+    const form = document.forms["submit-to-google-sheet"];
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      let name = form.FullName.value;
+      let email = form.Phone.value;
+      let phone = form.EmailAddress.value;
+
+      if (name && email && phone) {
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+      } else {
+        console.log("data not found");
+      }
+    });
   };
 
   /* Initialize
@@ -494,23 +514,28 @@
   })();
 })(document.documentElement);
 
-function hamda(){
-    var ifConnected = window.navigator.onLine;
-    var empt = document.forms["sub"]["Name"]["Phone"]["Email"].value;
+function Check() {
+  var ifConnected = window.navigator.onLine;
+  var Name = document.forms["submit-to-google-sheet"]["Name"].value;
+  var Phone = document.forms["submit-to-google-sheet"]["Phone"].value;
+  var Email = document.forms["submit-to-google-sheet"]["Email"].value;
 
-    if (!ifConnected && empt == "") {
-         Swal.fire({
-           icon: "error",
-           title: "Oops...",
-           text: "Something went wrong!",
-         });
-    } else {
-      Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "Sent Succesfully",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-    }
+  if ((!ifConnected && Name == "") || Phone == "" || Email == "") {
+    Swal.fire({
+      position: "top-end",
+      icon: "error",
+      title: "Oops...",
+      text: "Something went wrong!",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  } else {
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Sent Succesfully",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  }
 }
