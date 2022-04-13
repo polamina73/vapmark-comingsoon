@@ -1,15 +1,10 @@
-/* ===================================================================
- *  Khronos 2.0.0 - Main JS
- *
- *
- * ------------------------------------------------------------------- */
 
 (function (html) {
   "use strict";
 
   const cfg = {
     // Countdown Timer Final Date
-    finalDate: "April 1, 2022 00:00:00",
+    finalDate: "May 15, 2022 00:00:00",
   };
 
   /* Preloader
@@ -79,9 +74,9 @@
 
       if (days <= 99) {
         if (days <= 9) {
-          days = "00" + days;
-        } else {
           days = "0" + days;
+        } else {
+          days =  days;
         }
       }
 
@@ -521,21 +516,35 @@ function Check() {
   var Email = document.forms["submit-to-google-sheet"]["Email"].value;
 
   if ((!ifConnected && Name == "") || Phone == "" || Email == "") {
-    Swal.fire({
-      position: "top-end",
-      icon: "error",
-      title: "Oops...",
-      text: "Something went wrong!",
-      showConfirmButton: false,
-      timer: 1500,
-    });
+    // Swal.fire({
+    //   position: "top-end",
+    //   icon: "error",
+    //   title: "Oops...",
+    //   text: "Something went wrong!",
+    //   showConfirmButton: false,
+    //   timer: 1500,
+    // });
+    showAlert("center" , "error" , "Oops..." , "Something went wrong!")
   } else {
-    Swal.fire({
-      position: "top-end",
-      icon: "success",
-      title: "Sent Succesfully",
-      showConfirmButton: false,
-      timer: 1500,
-    });
+    // Swal.fire({
+    //   position: "top-end",
+    //   icon: "success",
+    //   title: "Sent Succesfully",
+    //   showConfirmButton: false,
+    //   timer: 1500,
+    // });
+    showAlert("center" , "success" , "Sent Succesfully")
+
   }
+}
+
+function showAlert(position , icon , title , text){
+  Swal.fire({
+    position: position,
+    icon: icon,
+    title: title,
+    text: text,
+    showConfirmButton: false,
+    timer: 1500,
+  });
 }
